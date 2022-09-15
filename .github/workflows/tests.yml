@@ -1,0 +1,8 @@
+name: "test-python-packages"
+
+on:
+  push:
+
+jobs:
+  test-reused-workfow:
+    uses: utnapischtim/test-ci/.github/workflows/tests.yml@main
