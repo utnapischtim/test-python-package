@@ -15,7 +15,6 @@ import pytest
 from flask import Flask
 
 from test_python_package import TestPythonPackage
-from test_python_package.views import blueprint
 
 
 @pytest.fixture(scope="module")
@@ -35,7 +34,6 @@ def create_app(instance_path):
         app = Flask("testapp", instance_path=instance_path)
         app.config.update(**config)
         TestPythonPackage(app)
-        app.register_blueprint(blueprint)
         return app
 
     return factory
