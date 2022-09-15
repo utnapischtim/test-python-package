@@ -11,18 +11,3 @@
 # the templates and static folders as well as the test case.
 
 from flask import Blueprint, render_template
-
-blueprint = Blueprint(
-    "test_python_package",
-    __name__,
-    template_folder="templates",
-    static_folder="static",
-)
-
-
-@blueprint.route("/")
-def index():
-    """Render a basic view."""
-    return render_template(
-        "test_python_package/index.html", module_name="test-python-package"
-    )
