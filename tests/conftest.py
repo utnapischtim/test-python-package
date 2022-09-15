@@ -16,6 +16,8 @@ from flask import Flask
 
 from test_python_package import TestPythonPackage
 
+TestPythonPackage.__test__ = False
+
 
 @pytest.fixture(scope="module")
 def celery_config():
