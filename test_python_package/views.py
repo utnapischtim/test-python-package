@@ -11,7 +11,6 @@
 # the templates and static folders as well as the test case.
 
 from flask import Blueprint, render_template
-from flask_babelex import gettext as _
 
 blueprint = Blueprint(
     "test_python_package",
@@ -25,5 +24,5 @@ blueprint = Blueprint(
 def index():
     """Render a basic view."""
     return render_template(
-        "test_python_package/index.html", module_name=_("test-python-package")
+        "test_python_package/index.html", module_name="test-python-package"
     )

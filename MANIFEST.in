@@ -16,6 +16,8 @@
 include *.rst
 include *.sh
 include *.txt
+include *.md
+include *.html
 include .dockerignore
 include .editorconfig
 include .tx/config
@@ -31,4 +33,7 @@ recursive-include .github/workflows *.yml
 recursive-include examples *.html *.py *.sh
 recursive-include invenio_records *.html *.mo *.po *.pot *.xml *.py
 recursive-include tests *.xml *.py
+recursive-include test_python_package *.html
 include .git-blame-ignore-revs
+
+2
