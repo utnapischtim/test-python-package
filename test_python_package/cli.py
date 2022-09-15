@@ -1,1 +1,3 @@
-def main(): pass
+def main():
+    """Main."""
+    pass
