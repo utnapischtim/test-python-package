@@ -1,0 +1,17 @@
+name: "test-python-packages"
+
+on:
+  push:
+    branches: master
+  pull_request:
+    branches: master
+  workflow_dispatch:
+    inputs:
+      reason:
+        description: 'Reason'
+        required: false
+        default: 'Manual trigger'
+
+jobs:
+  test-reused-workfow:
+    uses: utnapischtim/test-ci/.github/workflows/tests.yml@main
