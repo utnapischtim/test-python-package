@@ -9,7 +9,9 @@
 
 import os
 
+import requests
 import sphinx.environment
+
 from test_python_package import __version__
 
 # -- General configuration ------------------------------------------------

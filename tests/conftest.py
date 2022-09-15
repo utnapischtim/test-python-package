@@ -11,11 +11,9 @@ See https://pytest-invenio.readthedocs.io/ for documentation on which test
 fixtures are available.
 """
 
-import shutil
-import tempfile
-
 import pytest
 from flask import Flask
+
 from test_python_package import TestPythonPackage
 from test_python_package.views import blueprint
 
