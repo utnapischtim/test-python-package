@@ -27,8 +27,8 @@ python -m sphinx.cmd.build -qnNW docs docs/_build/html
 # TODO: Remove services below that are not neeed (fix also the usage note).
 echo "DB: ${DB}"
 echo "SEARCH: ${SEARCH}"
-echo "CACHE: ${CACHE}"
-echo "MQ: ${MQ}"
+echo "CACHE: ${CACHE:-redis}"
+echo "MQ: ${MQ:-ahahah}"
 eval "$(docker-services-cli up --db ${DB:-postgresql} --search ${SEARCH:-elasticsearch} --cache ${CACHE:-redis} --mq ${MQ:-rabbitmq} --env)"
 python -m pytest
 tests_exit_code=$?
