@@ -1,0 +1,10 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  test-publish-workflow:
+    uses: utnapischtim/test-ci/.github/workflows/test-publish.yml@main
